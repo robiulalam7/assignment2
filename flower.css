@@ -8,7 +8,7 @@
 
 /*banner font*/
 
-.noto-serif-banner-title {
+.noto-serif-banner-title,.product-title {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -49,7 +49,7 @@
 /* end navbar*/ 
 
 /*main section*/
-/*bannner*/
+/*banner*/
 .banner{
     display: flex;
     justify-content: center;
@@ -69,4 +69,54 @@
 .banner-img{
     width: 570px;
     height: 355px;
+}
+/* plant section*/
+
+.product-details{
+    text-align: center;
+    padding: 30px 150px;
+}
+.product-title{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.product-description{
+    font-size: 22px;
+    color: #848992;
+}
+/* card*/
+.card-container{
+    padding: 30px 150px;
+}
+.product-cards{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+}
+.product-card{
+    text-align: center;
+}
+/* card */
+
+.card-description{
+    color: #111111;
+    font-size: 22px;
+    font-weight: medium;
+    margin-top: 0;
+}
+.product-price{
+    color: #111111;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 0;
+}
+.add-to-cart-btn{
+    
+    background-color: #E95A08;
+    color: white;
+    border: none;
+    padding: 20px 90px;
+    align-items: center;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
