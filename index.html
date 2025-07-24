@@ -4,19 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/433196e42d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="flower.css">
 </head>
 <body>
     <!--nav section-->
-    <nav>
-
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo.png" alt="flower-shope-logo">
+        </div>
+        <div class="nav-links">
+            <ul class="nav-link">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><i class="fa-solid fa-cart-shopping"></i>
+                <a class="active" href="">Cart($56)</a></li>
+            </ul>
+            <!--
+            <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>cart($50)</span>
+            </div>
+            -->
+        </div>
     </nav>
+
     <!--main section-->
     <main>
+        <!--banner design-->
+        <section class="banner">
+            <div class="banner-details">
+                <h1 class="banner-title noto-serif-banner-title">ALWAYS <span style="color: #E95A08;">FRESH</span><br><span style="color: #E95A08;">FLOWERS</span></h1>
+                <p class="banner-descrption inter-font">Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic blooms, we offer a wide variety of fresh flowers that are perfect for any occasion. </p>
+             </div>
+            <div class="banner-img">
+                <img src="assets/hero-flower.png" alt="flowers">
+            </div>
+        </section>
+        
 
     </main>
     <!--Footer section-->
     <footer>
-        
+
     </footer>
 </body>
 </html>
