@@ -1,5 +1,10 @@
 /*font add*/
-
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+}
 .inter-font{
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -71,8 +76,6 @@
         display: flex;
         gap: 0;
     }
-
-    /* Hide all links except Cart */
     .nav-link li:not(:last-child) {
         display: none;
     }
@@ -108,6 +111,31 @@
     width: 570px;
     height: 355px;
 }
+/* responsive query for banner part*/
+@media (max-width: 576px) {
+    .banner {
+        flex-direction:column-reverse;
+        padding: 20px;
+        margin-top: 60px;
+        text-align: center;
+    }
+    .banner-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .banner-title {
+        font-size: 28px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .banner-description {
+        font-size: 16px;
+        text-align: left;
+        margin-top: 10px;
+    }
+  }
+
 /* plant section*/
 
 .product-details{
@@ -148,8 +176,7 @@
     font-weight: bold;
     margin-top: 0;
 }
-.add-to-cart-btn{
-    
+.add-to-cart-btn{  
     background-color: #E95A08;
     color: white;
     border: none;
@@ -158,6 +185,35 @@
     border-radius: 4px;
     font-weight: bold;
     margin-bottom: 20px;
+}
+/* respons card*/
+@media (max-width: 576px) {
+    .product-details {
+        padding: 20px;
+
+    }
+
+    .product-title {
+        font-size: 28px;
+    }
+
+    .product-description {
+        font-size: 16px;
+    }
+
+    .card-container {
+        padding: 16px;
+        margin-bottom: 60px;
+    }
+
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product-card {
+        text-align: center;
+    }
 }
 /* badge design*/
 .badge-container{
@@ -183,6 +239,39 @@
 .store-description li{
     margin-bottom: 20px;
 }
+/* badges responsive*/
+@media (max-width: 576px) {
+    .badge-container {
+        padding: 20px;
+    }
+
+    .store-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .store-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .store-title {
+        font-size: 28px;
+        text-align: left;
+        margin: 0;
+    }
+
+    .store-description {
+        font-size: 16px;
+        color: #9ca5a5db;
+        text-align: left;
+    }
+
+    .store-description li {
+        margin-bottom: 12px;
+    }
+}
 /* offer section*/
 .offer{
     margin-top: 133px;
@@ -206,13 +295,11 @@
   padding: 30px 150px;
   
 }
-
 .left-column {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .offer-card,
 .right-column {
   position: relative;
@@ -221,7 +308,6 @@
   color: white;
   
 }
-
 .offer-card {
   width: 400px;
   height: 240px;
@@ -229,7 +315,6 @@
   background-position: center;
   
 }
-
 .right-column {
   width: 600px;
   height: 300px;
@@ -237,7 +322,6 @@
   background-position: center;
   text-align: center;
 }
-
 .offer-item {
   text-align: center;
   position: absolute;
@@ -246,13 +330,11 @@
   transform: translate(-50%, -50%);
   color: white;
 }
-
 .offer-item h3 {
   margin: 0 0 10px;
   font-size: 20px;
   font-weight: bold;
 }
-
 .offer-item a {
   color: white;
   text-decoration: underline;
@@ -263,20 +345,60 @@
 .bloom {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/deal-bloom.png");
 }
-
 .ana {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/deal-ana.png");
 }
-
 .zabo {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("assets/deal-zabo.png");
   width: 75%;
   height: auto;
 }
+/* responsive offer*/
+@media (max-width: 576px) {
+  .offer {
+    margin-top: 60px;
+  }
+
+  .deal-title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .deal-description {
+    text-align: center;
+    font-size: 16px;
+    padding: 5px 20px 30px;
+  }
+
+  .offers-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .left-column {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .offer-card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .right-column {
+    width: 100%;
+    height: 250px;
+  }
+
+  .offer-item h3 {
+    font-size: 18px;
+  }
+}
 /* subscribe part */
 .subscribe{
   background-image: url('assets/news-letter-bg.png');
-  background-size: cover;
+  background-size:cover;
   background-position: center;
   height: 100vh;
   display: flex;
@@ -290,14 +412,12 @@
     margin-bottom: 20px;
 
 }
-
 .user-data {
   display: flex;
   justify-content: center;
   width: 100%;
   
 }
-
 .user-data input {
   padding: 10px;
   width: 100%;
@@ -305,7 +425,6 @@
   border-radius: 4px 0 0 4px;
   font-size: 12px;
 }
-
 .user-data button {
   padding: 8px 10px;
   background-color: #f15025;
@@ -314,12 +433,42 @@
   border-radius: 0 4px 4px 0;
   font-size: 16px;
 }
+/* responseive join part */
+@media (max-width: 576px) {
+  .subscribe {
+    height: auto;
+    padding: 40px 20px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .sub-text h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .user-data {
+    width: 100%;
+    gap: 0px;
+  }
+
+  .user-data input {
+    width: 100%;
+    border-radius: 4px 0px 0px 4px;
+    font-size: 14px;
+  }
+
+  .user-data button {
+    width: 100%;
+    border-radius:0px 4px 4px 0px;
+    font-size: 14px;
+  }
+}
 /* footer design */
 .footer{
     margin-top: 0;
     padding: 80px;
 }
-/* ai*/
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -327,31 +476,25 @@
   max-width: 1100px;
   margin: auto;
 }
-
 .footer-left {
   max-width: 250px;
 }
-
 .footer-left img .logo {
   height: 50px;
   margin-bottom: 10px;
 }
-
 .footer-left p {
   color: #777;
   font-size: 17px;
 }
-
 .footer-links {
   display: flex;
   gap:120px;
 }
-
 .footer-links ul {
   list-style: none;
   padding: 10px;
 }
-
 .footer-links ul li {
   color: #8b8a8a;
   margin-bottom: 10px;
@@ -362,4 +505,44 @@
   margin-top: 15px;
   margin-left: 12px;
   vertical-align: middle;
+}
+/*response footer*/
+@media (max-width: 576px) {
+  .footer {
+    padding: 40px 20px;  
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:0px;
+  }
+  .footer-left,
+  .footer-links ul,
+  .footer-icons {
+    margin-top: 0px;
+  }
+  .footer-left {
+    max-width: 100%;
+  }
+  .footer-left p {
+    font-size: 15px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap:0px;
+    width: 100%;
+  }
+  .footer-links ul {
+    padding: 0;
+  }
+  .footer-links ul li {
+    font-size: 14px;
+  }
+  .footer-icons {
+    margin-top: 10px;
+  }
+  .footer-icons a img {
+    margin-left: 0;
+    margin-right: 10px;
+  }
 }
