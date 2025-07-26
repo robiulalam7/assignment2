@@ -5,7 +5,9 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
-
+.bg-color{
+  background-color:rgb(232, 242, 245);
+}
 /*banner font*/
 
 .noto-serif-banner-title,.product-title{
@@ -46,6 +48,42 @@
     color: black;
     font-weight: bold;
 }
+/*responsive nav*/
+@media (max-width: 576px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-end;
+        width: auto;
+    }
+
+    .nav-link {
+        display: flex;
+        gap: 0;
+    }
+
+    /* Hide all links except Cart */
+    .nav-link li:not(:last-child) {
+        display: none;
+    }
+
+    .nav-link li:last-child a {
+        font-size: 16px;
+        color: black;
+        font-weight: bold;
+    }
+}  
+
 /* end navbar*/ 
 
 /*main section*/
